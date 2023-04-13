@@ -8,10 +8,17 @@ import {
   MdOutlineMoreHoriz,
   MdOutlineSettings,
   MdOutlineLogout,
+  MdOutlineCode,
 } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { FaRegComments } from "react-icons/fa";
 import { BiMessageSquareDots } from "react-icons/bi";
+import Link from "next/link";
+
+function handleClick(url) {
+  const router = useRouter();
+  router.push(url);
+}
 
 function SideNavbar() {
   return (
@@ -30,9 +37,11 @@ function SideNavbar() {
             </h1>
             <div className=" my-4 border-b border-gray-100 pb-4">
               <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
-                <MdOutlineSpaceDashboard className="text-2xl text-gray-600 group-hover:text-white " />
+                <MdOutlineCode className="text-2xl text-gray-600 group-hover:text-white " />
                 <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
-                  Dashboard
+                <Link href="/contents/">
+                            Dashboard
+                        </Link>
                 </h3>
               </div>
               <div className="flex  mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
