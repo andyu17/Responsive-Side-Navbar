@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/pro.ico" />
       </Head>
       <SideNavbar />
-      <Map className={styles.homeMap} width="800" height="400" center={DEFAULT_CENTER} zoom={12}>
+      <Map className={styles.homeMap} width="100%" height="100%" center={DEFAULT_CENTER} zoom={12}>
             {({ TileLayer, Marker, Popup }) => (
               <>
                 <TileLayer
